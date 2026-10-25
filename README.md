@@ -1,88 +1,162 @@
-# 🏆 EKPATHON mini — 1st Place
+# 🏆 EKPATHON mini 2026 — 1st Place
 
-**Three hours. Four students. C only. Zero AI. One winning team.**
+**3 hours. 4 students. C only. No AI. 1st place among 10 teams.**
 
-We participated in EKPATHON mini, a student hackathon organized at the Department of Informatics and Telecommunications of the National and Kapodistrian University of Athens (NKUA).
+Our team participated in EKPATHON mini, a three-hour programming competition organized at the Department of Informatics and Telecommunications of the National and Kapodistrian University of Athens (NKUA).
 
-Our challenge was to extend an existing OASA public transportation application with an original, useful, and feasible third feature — under strict constraints and a three-hour deadline.
+The challenge was to develop a third feature for an existing OASA public transportation application, focusing on innovation, usefulness, and feasibility.
 
-**Our team won 1st place among 10 participating teams.**
+We developed a **community-driven passenger review system** and won **1st place among 10 participating teams**, evaluated by a panel of professors.
 
 <p align="center">
-  <img src="assets/photo.jpeg" alt="Our team celebrating first place at EKPATHON mini with the winner's trophy" width="700">
+  <img src="assets/photo.jpeg" alt="EKPATHON mini 2026 — First-place trophy" width="700">
 </p>
 
 ## ⚡ The Challenge
 
-We were given an existing terminal-based public transportation application written in C, featuring:
+Each team received an existing terminal-based application written in C, designed to provide information about OASA bus services.
 
-- Bus departure schedules.
-- Estimated bus arrival times at selected stops.
+The application already included two features:
 
-Our task was to design and implement an entirely new feature of our own choosing.
+- **Feature 1 — Bus Departures:** View scheduled departure times for selected bus lines.
+- **Feature 2 — Bus Stop Arrivals:** Select a bus line and stop to view estimated bus arrival times.
 
-The challenge was designed to be approachable for first-year students while rewarding innovation, usefulness, and practical implementation.
+Our task was to design and implement **Feature 3**, introducing an original functionality that would add value to the existing application.
 
-### The Constraints
+### Competition Constraints
 
-- ⏱️ **3 hours** to develop our solution.
-- 💻 **C only** — no alternative programming languages.
+- ⏱️ **3 hours** to develop the feature.
+- 💻 **C only** — no other programming languages.
 - 🚫 **Strictly no AI assistance** for any purpose.
-- 💡 An original feature that adds meaningful value to the existing application.
+- 💡 The proposed feature had to be innovative, useful, and feasible.
 
-No AI-generated code. No ready-made AI solutions. Just our team, our ideas, and the code we wrote.
+The challenge focused on problem-solving, implementation, and teamwork under strict time constraints.
 
-## 💡 Our Solution: Community-Powered Bus Reviews
+## 💡 Our Solution — Feature 3: Community Bus Reviews
 
-We developed a passenger feedback system that allows users to rate their bus experience across three categories:
+We developed a passenger reporting system that allows users to submit feedback about their bus journey.
 
-- **Crowding** — How crowded was the bus?
-- **Personnel** — How would you rate the personnel?
-- **Vehicle Condition** — What was the condition of the bus?
+The idea was to complement existing transportation information with insights into the actual passenger experience.
 
-Each category receives a score from 1 to 10. The application calculates an overall average, saves the report locally, and allows users to review previously submitted reports.
+### 📝 Passenger Ratings
 
-To encourage continued participation, we also implemented a prototype reward mechanism that notifies users when they reach ten reports.
+Users select a bus line and a stop, then evaluate three aspects of their experience on a scale of 1–10:
 
-Our idea was simple: public transportation information should go beyond schedules and arrival times. Passenger experiences can provide another perspective on the quality of a journey.
+| Category | Description |
+|---|---|
+| 🧍 Crowding | How crowded was the bus? |
+| 👥 Personnel | How would you rate the personnel? |
+| 🚌 Vehicle Condition | What was the condition of the bus? |
 
-## 🛠️ What We Built
+The application calculates the average of the three ratings to produce an overall score for each report.
 
-- Interactive reporting through a terminal interface.
-- Bus line and stop selection using the existing application.
-- Three-category passenger ratings and average score calculation.
-- Local report persistence using a text file.
-- Report history displayed directly in the application.
-- A prototype contribution-based reward mechanism.
+### 💾 Report Storage
 
-The implementation was built in C and integrated into the existing project.
+Submitted reports are appended to a local `reports.txt` file.
+
+Each record contains:
+- Bus line number.
+- Bus line name.
+- Selected stop.
+- Report submission time.
+- Average rating.
+
+Users can also view the accumulated report history directly in the terminal.
+
+### 🎁 Contribution-Based Rewards
+
+To encourage continued participation, we implemented a prototype reward mechanism.
+
+After ten reports, the application displays a notification indicating that the user has earned a free-ticket reward.
+
+The reward system demonstrates the concept of encouraging passengers to contribute feedback. Actual ticket issuance, persistent user accounts, and verified daily streaks are outside the scope of the current implementation.
+
+## 🛠️ Implementation
+
+Our team implemented the third feature in C and integrated it into the existing application.
+
+The implementation includes:
+- Interactive terminal-based reporting.
+- Integration with the existing bus line and stop selection functionality.
+- Collection of three passenger ratings.
+- Average score calculation.
+- Local file storage and report history.
+- A report-counting and reward-notification mechanism.
+
+**Project scope:** The original application, including the bus departure and arrival functionality, was provided by the competition organizer. Our team's contribution was the design and implementation of the third feature: the community-driven passenger review system.
+
+We did not develop the entire OASA application from scratch.
+
+## 🚀 How to Run
+
+### Prerequisites
+
+- [Git](https://git-scm.com/)
+- A C compiler, such as GCC
+- `make`
+
+### Installation & Execution
+
+**1. Clone the repository**
+
+```bash
+git clone https://github.com/konsamarinas/ekpathon-mini-2026-1.git
+```
+
+**2. Navigate to the project directory**
+
+```bash
+cd ekpathon-mini-2026-1
+```
+
+**3. Compile the application**
+
+```bash
+make
+```
+
+**4. Run the application**
+
+```bash
+./oasa
+```
+
+### Using the Application
+
+Once the application starts, use the terminal menu to select one of the available features:
+
+- **1 — Bus Departures:** View scheduled departures for a selected bus line.
+- **2 — Bus Stop Arrivals:** Check estimated arrival times at a selected stop.
+- **3 — Add Report / Show All:** Submit a passenger review and view previously saved reports.
+- **0 — Exit:** Close the application.
+
+When submitting a report, select a bus line and stop, then rate crowding, personnel, and vehicle condition on a scale of 1–10.
+
+Reports are saved locally in `reports.txt`.
+
 
 ## 🥇 The Result
 
-**1st place out of 10 teams.**
+**1st place out of 10 participating teams.**
 
-In just three hours, we turned an open-ended challenge into a working feature and presented our solution to a panel of academic judges.
+Within a three-hour time limit, we designed and implemented our feature and presented the solution to a panel of professors.
 
-Winning was a rewarding recognition of our team's ability to combine an original idea with practical implementation under tight constraints.
+The competition challenged us to combine an original idea with practical implementation, using only C and without AI assistance.
 
-## 👥 The Team
+Our team was awarded first place for our solution.
 
-A team of four students collaborating across software development, development support, and presentation.
+## 👥 Team
 
-**My contribution:** Software development and implementation of the reporting feature in C, working alongside a teammate who supported the coding process.
+Developed collaboratively by a team of four students, with responsibilities shared across software development, coding support, and project presentation.
 
-The rest of our team focused on presenting the solution and communicating its value to the judges.
+## 🔗 Original Starter Repository
 
-## 📂 Project Repository
+The original application was provided by the competition organizer:
 
-This repository contains our implementation of the third feature, built on top of the original EKPATHON mini starter project.
+[**steliosrotas/ekpathon-mini-1**](https://github.com/steliosrotas/ekpathon-mini-1)
 
-- **Original starter repository:** [steliosrotas/ekpathon-mini-1](https://github.com/steliosrotas/ekpathon-mini-1)
-- **Language:** C
-- **Storage:** Local text file (`reports.txt`)
-
-The project was developed as part of a time-limited educational competition, rather than as a production-ready transportation service.
+This repository documents our team's contribution to EKPATHON mini 2026: the development of Feature 3 for the existing OASA application.
 
 ---
 
-*Three hours of problem-solving. One team effort. One first-place finish.* 🏆
+*An original idea, three hours of development, and a first-place finish.* 🏆
