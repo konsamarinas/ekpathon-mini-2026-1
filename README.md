@@ -1,64 +1,88 @@
-# 1ο EKPATHON mini
+# 🏆 EKPATHON mini — 1st Place
 
-## Θεματική: Τηλεματική - Εφαρμογή Χρόνου Άφιξης Λεωφορείων
+**Three hours. Four students. C only. Zero AI. One winning team.**
 
-Καλωσορήσατε στο πρώτο EKPATHON mini της ακαδημαϊκής χρονιάς!
+We participated in EKPATHON mini, a student hackathon organized at the Department of Informatics and Telecommunications of the National and Kapodistrian University of Athens (NKUA).
 
-Αυτό το README περιέχει όσα χρειάζεται να ξέρετε για τον κώδικα που σας δίνεται.
+Our challenge was to extend an existing OASA public transportation application with an original, useful, and feasible third feature — under strict constraints and a three-hour deadline.
 
-Το πρόγραμμα είναι ένα (και καλά) αντίγραφο της εφαρμογής του ΟΑΣΑ, αλλά στο τερματικό.
+**Our team won 1st place among 10 participating teams.**
 
-Στην εφαρμογή έχουν ήδη υλοποιηθεί δύο λειτουργίες. Με την πρώτη, ο χρήστης μπορεί να δει τις αναχωρήσεις λεωφορείων μέσα στην ημέρα, από την αφετηρία και από τον τερματικό σταθμό. Με την δεύτερη λειτουργία, ο χρήστης μπορεί να επιλέξει τη στάση μιας γραμμής λεωφορείου και να δει την ώρα άφιξης των λεωφορείων που περνάνε από αυτή την στάση.
+<p align="center">
+  <img src="assets/ekpathon-trophy.jpg" alt="Our team celebrating first place at EKPATHON mini with the winner's trophy" width="700">
+</p>
 
-Αυτό που έχετε να κάνετε εσείς είναι να υλοποιήσετε μια τρίτη λειτουργία! Το τι θα κάνει η λειτουργία αυτή καθορίζεται από εσάς! Πρέπει η ιδέα σας για την λειτουργία αυτή να είναι καινοτόμα (δηλαδή να μην έχει ήδη υλοποιηθεί αυτούσια σε άλλες εφαρμογές, όπως το google maps, ή η ίδια η εφαρμογή του οασά) και προφανώς πρέπει να είναι χρήσιμη. Για να την χτίσετε, μπορείτε να αξιοποιήσετε δεδομένα από τις ήδη υπάρχουσες λειτουργίες ή να την χτίσετε από το μηδέν.
+## ⚡ The Challenge
 
-### Πώς αντιγράφω τον κώδικα τοπικά; Και πώς κάνω fork;
+We were given an existing terminal-based public transportation application written in C, featuring:
 
-Για να τροποποιήσετε τον κώδικα, πρέπει πρώτα να κάνετε fork το repository που σας έστειλα και μετά να κατεβάσετε τον κώδικα τοπικά.
+- Bus departure schedules.
+- Estimated bus arrival times at selected stops.
 
-Στην σελίδα του repository, πατήστε πάνω δεξιά στο κουμπί που γράφει Fork. Συμπλήρωστε τα σωστά στοιχεία και μετά πατήστε Create Fork. Θα σας δημιουργήσει νέο repository, ίδιος κώδικας, αλλά στο username σας. Από εκεί και πέρα, μπορείτε να τον τροποποιήσετε.
+Our task was to design and implement an entirely new feature of our own choosing.
 
-Στο τερματικό σας, γράψτε τις εξής εντολές:
+The challenge was designed to be approachable for first-year students while rewarding innovation, usefulness, and practical implementation.
 
-```
-git clone https://github.com/<your-github-username>/ekpathon-mini-1
-cd ./ekpathon-mini-1
-```
+### The Constraints
 
-### Πώς κάνεις μεταγλώττιση/compile στο πρόγραμμα;
+- ⏱️ **3 hours** to develop our solution.
+- 💻 **C only** — no alternative programming languages.
+- 🚫 **Strictly no AI assistance** for any purpose.
+- 💡 An original feature that adds meaningful value to the existing application.
 
-Τίποτα ιδιαίτερο, τρέξε μονάχα την παρακάτω εντολή στο τερματικό (και να βρίσκεσαι στον ίδιο φάκελο που βρίσκεται το αρχείο που τώρα διαβάζεις):
+No AI-generated code. No ready-made AI solutions. Just our team, our ideas, and the code we wrote.
 
-```
-make
-```
+## 💡 Our Solution: Community-Powered Bus Reviews
 
-Με αυτή την απλή εντολή, θα παραχθεί το εκτελέσιμο ` oasa `. Τρέχοντας λοιπόν την εντολή:
+We developed a passenger feedback system that allows users to rate their bus experience across three categories:
 
-```
-./oasa
-```
+- **Crowding** — How crowded was the bus?
+- **Personnel** — How would you rate the personnel?
+- **Vehicle Condition** — What was the condition of the bus?
 
-στον φάκελο που βρίσκεστε, ανοίγετε την εφαρμογή.
+Each category receives a score from 1 to 10. The application calculates an overall average, saves the report locally, and allows users to review previously submitted reports.
 
-Στο αρχικό μενού της εφαρμογής, πληκτρολογώντας 1 ή 2, ο χρήστης κατευθύνεται στην πρώτη ή δεύτερη λειτουργία της εφαρμογής, αντίστοιχα. Στόχος είναι, πληκτρολογώντας 3, ο χρήστης ανακατευθύνεται στην λειτουργία που θα χτίσετε εσείς.
+To encourage continued participation, we also implemented a prototype reward mechanism that notifies users when they reach ten reports.
 
-## ΠΟΙΑ ΣΥΝΑΡΤΗΣΗ ΠΡΕΠΕΙ ΝΑ ΥΛΟΠΟΙΗΣΕΤΕ
+Our idea was simple: public transportation information should go beyond schedules and arrival times. Passenger experiences can provide another perspective on the quality of a journey.
 
-Στην γραμμή 152 βρίσκεται η συνάρτηση ` void your_awesome_feature_menu(); `. Αυτή πρέπει να συμπληρώσετε (ή να δημιουργήσετε παραπάνω συναρτήσεις ή και αρχεία).
+## 🛠️ What We Built
 
-## ΜΗ ΣΑΣ ΤΡΟΜΑΖΟΥΝ Ο ΚΩΔΙΚΑΣ ΚΑΙ ΤΑ ΠΟΛΛΑ ΑΡΧΕΙΑ
+- Interactive reporting through a terminal interface.
+- Bus line and stop selection using the existing application.
+- Three-category passenger ratings and average score calculation.
+- Local report persistence using a text file.
+- Report history displayed directly in the application.
+- A prototype contribution-based reward mechanism.
 
-Δεν χρειάζεται να ασχοληθείτε ΚΑΘΟΛΟΥ με αυτά. Το μόνο αρχείο που θα τροποποιήσετε είναι το ` ./main.c ` και θα χρησιμοποιήσετε συναρτήσεις από το αρχείο ` api.h `.
+The implementation was built in C and integrated into the existing project.
 
-Για να αντλήσετε τα δεδομένα του προγράμματος, αρκεί να καλέσετε την αντίστοιχη συνάρτηση από την ` api.h `, απλώς με το όνομα της συνάρτησης και να καταχωρείτε το αποτέλεσμα της συνάρτησης σε μία μεταβλητή. Ορίστε ένα παράδειγμα:
+## 🥇 The Result
 
-```
-int next_arrival =  get_next_arrival_time(040, 0, 23);
-```
+**1st place out of 10 teams.**
 
-Στο συγκεκριμένο παράδειγμα, θα επιστραφεί στην μεταβλητή ` next_arrival ` τα λεπτά που μένουν για φτάσει το 040, από κανονική κατεύθυνση (0) Πειραιά προς Σύνταγμα, στην 23η στάση του 040.
+In just three hours, we turned an open-ended challenge into a working feature and presented our solution to a panel of academic judges.
 
-Σχόλιο: Αν δείτε κάποιες συναρτήσεις να επιστρέφουν τύπους με αστεράκια, ΜΗΝ ΑΣΧΟΛΗΘΕΙΤΕ, ρωτήστε κάποιον βοηθό!!
+Winning was a rewarding recognition of our team's ability to combine an original idea with practical implementation under tight constraints.
 
-Καλή επιτυχία!!!!!!!!!!!!!!!
+## 👥 The Team
+
+A team of four students collaborating across software development, development support, and presentation.
+
+**My contribution:** Software development and implementation of the reporting feature in C, working alongside a teammate who supported the coding process.
+
+The rest of our team focused on presenting the solution and communicating its value to the judges.
+
+## 📂 Project Repository
+
+This repository contains our implementation of the third feature, built on top of the original EKPATHON mini starter project.
+
+- **Original starter repository:** [steliosrotas/ekpathon-mini-1](https://github.com/steliosrotas/ekpathon-mini-1)
+- **Language:** C
+- **Storage:** Local text file (`reports.txt`)
+
+The project was developed as part of a time-limited educational competition, rather than as a production-ready transportation service.
+
+---
+
+*Three hours of problem-solving. One team effort. One first-place finish.* 🏆
