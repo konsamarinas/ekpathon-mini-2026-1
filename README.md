@@ -87,6 +87,29 @@ The implementation includes:
 
 We did not develop the entire OASA application from scratch.
 
+
+## 🎤 Our Presentation
+
+A successful hackathon is about more than writing code. It's also about communicating an idea, explaining the implementation, and demonstrating its value under time pressure.
+
+Our team presented our solution to the competition judges, showcasing the feature we developed in just three hours using C, without AI assistance.
+
+### 📄 Presentation Slides
+
+📑 **[View our presentation (PDF)](assets/presentation.pdf)**
+
+
+
+## 👥 The Team — C-Horses
+
+Four students, three hours, one solution, and **1st place among 10 teams**.
+
+- **Κωνσταντίνος Σαμαρίνας** (*Samarinas Konstantinos*)
+- **Χρήστος Μηλαίος** (*Milaios Christos*)
+- **Αναστάσης Αναστασίου** (*Anastasiou Anastasis*)
+- **Θεανώ Μπαλή** (*Bali Theano*)
+
+
 ## 🚀 How to Run
 
 ### Prerequisites
