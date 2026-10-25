@@ -9,7 +9,7 @@ Our challenge was to extend an existing OASA public transportation application w
 **Our team won 1st place among 10 participating teams.**
 
 <p align="center">
-  <img src="assets/ekpathon-trophy.jpg" alt="Our team celebrating first place at EKPATHON mini with the winner's trophy" width="700">
+  <img src="assets/photo.jpeg" alt="Our team celebrating first place at EKPATHON mini with the winner's trophy" width="700">
 </p>
 
 ## ⚡ The Challenge
